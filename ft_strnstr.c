@@ -6,7 +6,7 @@
 /*   By: averkenn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/08 04:36:02 by averkenn          #+#    #+#             */
-/*   Updated: 2014/11/11 07:18:51 by averkenn         ###   ########.fr       */
+/*   Updated: 2015/01/22 10:26:28 by averkenn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char *ft_strnstr(const char *s1, const char *s2, size_t n)
 {
-	int c;
-	size_t d;
+	int		c;
+	size_t	d;
 
 	c = 0;
 	d = 0;
