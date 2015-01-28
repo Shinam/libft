@@ -6,7 +6,7 @@
 /*   By: averkenn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/22 11:26:23 by averkenn          #+#    #+#             */
-/*   Updated: 2015/01/22 11:40:49 by averkenn         ###   ########.fr       */
+/*   Updated: 2015/01/28 21:04:23 by averkenn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	**ft_strsplit(char const *s, char c)
 	i = 0;
 	j = 0;
 	k = 0;
-	str = malloc(sizeof(s) * *(ft_strlen(s) + 1));
+	str = malloc(sizeof(s) * (ft_strlen(s) + 1));
 	while (s[i])
 	{
 		if (s[i] != c)

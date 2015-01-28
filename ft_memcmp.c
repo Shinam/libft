@@ -6,7 +6,7 @@
 /*   By: averkenn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/07 02:38:51 by averkenn          #+#    #+#             */
-/*   Updated: 2014/11/13 10:41:52 by averkenn         ###   ########.fr       */
+/*   Updated: 2015/01/28 20:31:28 by averkenn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,7 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
 		s1++;
 		s2++;
 	}
+	if (!n)
+		return (0);
 	return (*(char *)s1 - *(char *)s2);
 }

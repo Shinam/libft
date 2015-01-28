@@ -6,7 +6,7 @@
 /*   By: averkenn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/22 10:20:42 by averkenn          #+#    #+#             */
-/*   Updated: 2015/01/22 10:23:12 by averkenn         ###   ########.fr       */
+/*   Updated: 2015/01/28 21:02:48 by averkenn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 void	ft_putnbr(int c)
 {
-	if (n = -2147483648)
+	if (c == -2147483648)
 		ft_putstr("-2147483648");
-	else if (n < 0)
+	else if (c < 0)
 	{
 		ft_putchar('-');
-		n = -n;
+		c = -c;
 	}
-	if (n >= 10)
+	if (c >= 10)
 	{
-		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
+		ft_putnbr(c / 10);
+		ft_putnbr(c % 10);
 	}
 	else
-		ft_putchar(n + 48);
+		ft_putchar(c + 48);
 }

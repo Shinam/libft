@@ -6,9 +6,11 @@
 /*   By: averkenn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/22 11:11:51 by averkenn          #+#    #+#             */
-/*   Updated: 2015/01/22 11:14:36 by averkenn         ###   ########.fr       */
+/*   Updated: 2015/01/28 21:04:13 by averkenn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
