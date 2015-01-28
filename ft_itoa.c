@@ -1,12 +1,12 @@
 #include "libft.h"
 
-char	*ft_itoa(int c)
+char	*ft_itoa(int n)
 {
 	char	*str;
 	int		i;
 	int		j;
 
-	i = c;
+	i = n;
 	j = 0;
 	while (i)
 	{
@@ -14,17 +14,17 @@ char	*ft_itoa(int c)
 		j++;
 	}
 	str = malloc(j);
-	if (c < 0)
+	if (n < 0)
 	{
-		c = c * -1;
+		n = n * -1;
 		j++;
 	}
 	while (j--)
 	{
-		str[j] = c % 10 + 48;
-		c = c / 10;
+		str[j] = n % 10 + 48;
+		n = n / 10;
 	}
-	if (str[0] == 48)
+	if (str[0] == 48 && (str[1]))
 		str[0] = '-';
 	return (str);
 }
