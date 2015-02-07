@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: averkenn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/06 23:53:53 by averkenn          #+#    #+#             */
-/*   Updated: 2015/02/07 01:54:58 by averkenn         ###   ########.fr       */
+/*   Created: 2014/11/05 02:29:28 by averkenn          #+#    #+#             */
+/*   Updated: 2014/11/11 07:06:42 by averkenn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strchr(const char *s, int c)
+#include "libft.h"
+
+char *ft_strdup(const char *s1)
 {
-	while (s && *s)
+	char	*c;
+	int		nb;
+
+	c = (char *)malloc(sizeof(char) * ft_strlen(s1));
+	nb = 0;
+	while (s1[nb] != '\0')
 	{
-		if (*s == c)
-			return ((char *)s);
-		s++;
+		c[nb] = s1[nb];
+		nb++;
 	}
-	return (0);
+	return (c);
 }

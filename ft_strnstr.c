@@ -1,40 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: averkenn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/01/22 11:11:51 by averkenn          #+#    #+#             */
-/*   Updated: 2015/02/07 02:30:57 by averkenn         ###   ########.fr       */
+/*   Created: 2014/11/08 04:36:02 by averkenn          #+#    #+#             */
+/*   Updated: 2015/01/22 10:26:28 by averkenn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char *ft_strnstr(const char *s1, const char *s2, size_t n)
 {
-	int		i;
-	char 	*str;
+	int		c;
+	size_t	d;
 
-	if (!s1)
-		return (ft_strdup(s2));
-	if (!s2)
-		return (ft_strdup(s1));
-	i = 0;
-	str = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
-	if (!str)
-		return (NULL);
-	while (*s1)
+	c = 0;
+	d = 0;
+	while (s1[c])
 	{
-		str[i] = *s1++;
-		i++;
+		if (d == n || !s2[d])
+			return ((char *)s1 + c);
+		else if (!s1[c + d] && s2[d])
+			return (0);
+		else if (s1[c + d] == s2[d])
+			d++;
+		else
+		{
+			d = 0;
+			c++;
+		}
 	}
-	while (*s2)
-	{
-		str[i] = *s2++;
-		i++;
-	}
-	str[i] = '\0';
-	return (str);
+	return (0);
 }

@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: averkenn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/02/03 00:29:02 by averkenn          #+#    #+#             */
-/*   Updated: 2015/02/07 03:11:16 by averkenn         ###   ########.fr       */
+/*   Created: 2014/11/06 23:53:53 by averkenn          #+#    #+#             */
+/*   Updated: 2015/01/28 20:34:01 by averkenn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
-# define BUF_SIZE 8
-
-# include <unistd.h>
-# include <stdlib.h>
-# include "libft/libft.h"
-
-int	get_next_line(int const fd, char **line);
-
-#endif
+char *ft_strchr(const char *s, int c)
+{
+	while (*s)
+	{
+		if (*s == c)
+			return ((char *)s);
+		s++;
+	}
+	return (0);
+}

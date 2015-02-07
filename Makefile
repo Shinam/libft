@@ -6,7 +6,7 @@
 #    By: averkenn <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/11/11 06:31:45 by averkenn          #+#    #+#              #
-#    Updated: 2015/02/07 01:52:16 by averkenn         ###   ########.fr        #
+#    Updated: 2015/01/28 20:51:09 by averkenn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,7 +67,7 @@ SRC	= ft_atoi.c\
 
 OBJ = $(SRC:.c=.o)
 
-FLAGS = -Wall -Wextra -Werror -g
+FLAGS = -Wall -Wextra -Werror
 
 LIB = libft.a
 
@@ -76,8 +76,7 @@ all : ran
 ran : $(LIB)
 	ranlib $(LIB)
 
-$(LIB) :
-	gcc $(FLAGS) -c $(SRC)
+$(LIB) : $(OBJ)
 	ar rc $(LIB) $(OBJ)
 
 clean : 
