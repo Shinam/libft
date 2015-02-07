@@ -6,7 +6,7 @@
 /*   By: averkenn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/22 11:15:27 by averkenn          #+#    #+#             */
-/*   Updated: 2015/02/07 05:23:59 by averkenn         ###   ########.fr       */
+/*   Updated: 2015/02/07 21:39:21 by averkenn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,19 @@
 
 char	*ft_strtrim(char const *s)
 {
-	int		i;
-	int		j;
+	int		start;
+	int		len;
 	char	*str;
 
 	if (!s)
 		return (NULL);
-	str = malloc(ft_strlen(s) + 1);
-	while (ft_isspace(s[i]))
-		i++;
-	while (s[i])
-	{
-		str[j] = s[i];
-		i++;
-		j++;
-	}
-	while (ft_isspace(s[i]))
-	{
-		str[j] = '\0';
-		i--;
-		j--;
-	}
+	len = ft_strlen(s);
+	while (s[start] && ft_isspace(s[start]))
+		start++;
+	if (start == len)
+		return (NULL);
+	while (ft_isspace(s[len--]));
+	len = len - start;
+	str = ft_strsub(s, start, len);
 	return (str);
 }
