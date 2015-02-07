@@ -6,7 +6,7 @@
 /*   By: averkenn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/22 10:56:31 by averkenn          #+#    #+#             */
-/*   Updated: 2015/01/22 10:58:03 by averkenn         ###   ########.fr       */
+/*   Updated: 2015/02/07 05:24:52 by averkenn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int i;
-	char *str;
+	int		i;
+	char	*str;
 
 	i = 0;
 	str = ft_strdup(s);

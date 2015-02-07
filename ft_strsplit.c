@@ -6,7 +6,7 @@
 /*   By: averkenn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/22 11:26:23 by averkenn          #+#    #+#             */
-/*   Updated: 2015/01/28 21:04:23 by averkenn         ###   ########.fr       */
+/*   Updated: 2015/02/07 05:23:24 by averkenn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,8 @@ char	**ft_strsplit(char const *s, char c)
 		if (s[i] != c)
 		{
 			while (s[i] != c && s[i])
-			{
-				str[k][j] = s[i];
-				j++;
-				i++;
-			}
-			str[k][j] = '\0';
-			k++;
+				str[k][j++] = s[i++];
+			str[k++][j] = '\0';
 		}
 		else
 			i++;

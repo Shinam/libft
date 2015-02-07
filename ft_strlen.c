@@ -6,7 +6,7 @@
 /*   By: averkenn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/05 00:03:31 by averkenn          #+#    #+#             */
-/*   Updated: 2014/11/13 09:47:10 by averkenn         ###   ########.fr       */
+/*   Updated: 2015/02/07 01:55:57 by averkenn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t ft_strlen(const char *s)
 	size_t nb;
 
 	nb = 0;
-	while (s[nb])
+	while (s && s[nb])
 		nb++;
 	return (nb);
 }

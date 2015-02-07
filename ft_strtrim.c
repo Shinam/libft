@@ -6,7 +6,7 @@
 /*   By: averkenn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/22 11:15:27 by averkenn          #+#    #+#             */
-/*   Updated: 2015/01/28 21:05:00 by averkenn         ###   ########.fr       */
+/*   Updated: 2015/02/07 05:23:59 by averkenn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strtrim(char const *s)
 		return (NULL);
 	str = malloc(ft_strlen(s) + 1);
 	while (ft_isspace(s[i]))
-			i++;
+		i++;
 	while (s[i])
 	{
 		str[j] = s[i];

@@ -6,7 +6,7 @@
 /*   By: averkenn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/22 11:11:51 by averkenn          #+#    #+#             */
-/*   Updated: 2015/01/28 21:04:13 by averkenn         ###   ########.fr       */
+/*   Updated: 2015/02/07 05:25:29 by averkenn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,14 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	int		i;
-	char 	*str;
+	char	*str;
 
+	if (!s1)
+		return (ft_strdup(s2));
+	if (!s2)
+		return (ft_strdup(s1));
 	i = 0;
-	str = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+	str = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (!str)
 		return (NULL);
 	while (*s1)
