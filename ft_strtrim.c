@@ -6,7 +6,7 @@
 /*   By: averkenn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/22 11:15:27 by averkenn          #+#    #+#             */
-/*   Updated: 2015/02/07 21:39:21 by averkenn         ###   ########.fr       */
+/*   Updated: 2015/02/07 22:05:19 by averkenn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,19 @@ char	*ft_strtrim(char const *s)
 	int		len;
 	char	*str;
 
+	start = 0;
 	if (!s)
 		return (NULL);
-	len = ft_strlen(s);
+	len = ft_strlen(s) - 1;
 	while (s[start] && ft_isspace(s[start]))
 		start++;
-	if (start == len)
+	while (ft_isspace(s[len]) && len > 0)
+		len--;
+	if (len == 0)
 		return (NULL);
-	while (ft_isspace(s[len--]));
 	len = len - start;
-	str = ft_strsub(s, start, len);
+	str = ft_strsub(s, start, len + 1);
+	if (!str)
+		return (NULL);
 	return (str);
 }
