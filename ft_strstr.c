@@ -6,7 +6,7 @@
 /*   By: averkenn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/08 03:57:19 by averkenn          #+#    #+#             */
-/*   Updated: 2015/01/28 23:30:37 by averkenn         ###   ########.fr       */
+/*   Updated: 2015/02/08 06:50:03 by averkenn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,24 @@
 
 char *ft_strstr(const char *s1, const char *s2)
 {
-	int c;
-	int d;
+	size_t c;
+	size_t d;
 
 	c = 0;
 	d = 0;
+	if (!s1)
+		return (NULL);
+	if (!s2)
+		return ((char *)s1);
+	if ((ft_strlen(s1) == 0) && (ft_strlen(s2) == 0))
+		return ("");
 	while (s1[c])
 	{
-		if (!s1[c + d] && s2[d])
-			return (0);
-		else if (!s2[d])
-			return ((char *)s1 + c);
-		else if (s1[c + d] == s2[d])
+		while((s1[c + d] == s2[d]) && (s1[c + d]))
 			d++;
-		else
-		{
-			d = 0;
-			c++;
-		}
+		if (d == ft_strlen(s2))
+			return (&((char *)s1)[c]);
+		c++;
 	}
-	return (0);
+	return (NULL);
 }
