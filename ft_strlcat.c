@@ -6,7 +6,7 @@
 /*   By: averkenn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/06 23:46:58 by averkenn          #+#    #+#             */
-/*   Updated: 2015/02/09 01:53:20 by averkenn         ###   ########.fr       */
+/*   Updated: 2015/02/09 01:59:49 by averkenn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,5 @@ size_t ft_strlcat(char *dst, const char *src, size_t size)
 		i++;
 	}
 	dst[len_dst + i] = '\0';
-	return (len_dst + len_src);	
+	return (len_dst + len_src);
 }

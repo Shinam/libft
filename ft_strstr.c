@@ -6,7 +6,7 @@
 /*   By: averkenn <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/08 03:57:19 by averkenn          #+#    #+#             */
-/*   Updated: 2015/02/08 06:50:03 by averkenn         ###   ########.fr       */
+/*   Updated: 2015/02/09 02:00:01 by averkenn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char *ft_strstr(const char *s1, const char *s2)
 		return ("");
 	while (s1[c])
 	{
-		while((s1[c + d] == s2[d]) && (s1[c + d]))
+		while ((s1[c + d] == s2[d]) && (s1[c + d]))
 			d++;
 		if (d == ft_strlen(s2))
 			return (&((char *)s1)[c]);
