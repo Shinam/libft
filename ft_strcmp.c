@@ -6,13 +6,15 @@
 /*   By: averkenn <averkenn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/07/10 22:16:35 by averkenn          #+#    #+#             */
-/*   Updated: 2014/11/13 11:27:24 by averkenn         ###   ########.fr       */
+/*   Updated: 2015/02/09 01:38:01 by averkenn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int		ft_strcmp(char *s1, char *s2)
 {
-	int i;
+	size_t i;
 
 	i = 0;
 	while (s1[i] || s2[i])
